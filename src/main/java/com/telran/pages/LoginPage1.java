@@ -9,6 +9,26 @@ public class LoginPage1 extends BasePage {
         super(driver);
     }
 
+    @FindBy(id = "id_registration-email")
+    WebElement userName_r;
+
+    @FindBy(id = "id_registration-password1")
+    WebElement password_r;
+
+    @FindBy(id = "id_registration-password2")
+    WebElement password_r1;
+
+    @FindBy (name = "registration_submit")
+    WebElement registrationBtn;
+
+    public ProfilePage1 registration(String name, String pass) {
+        type(userName_r, name);
+        type(password_r, pass);
+        type(password_r1, pass);
+        click(registrationBtn);
+        return new ProfilePage1(driver);
+    }
+
     @FindBy(id = "id_login-username")
     WebElement userName;
 
@@ -24,10 +44,6 @@ public class LoginPage1 extends BasePage {
         click(loginBtn);
         return new ProfilePage1(driver);
     }
-    public LoginPage1 loginNegative(String name, String pass) {
-        type(userName, name);
-        type(password, pass);
-        click(loginBtn);
-        return this;
-    }
+
+
 }

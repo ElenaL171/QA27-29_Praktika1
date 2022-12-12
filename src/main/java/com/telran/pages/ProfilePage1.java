@@ -17,4 +17,5 @@ public class ProfilePage1 extends BasePage {
         click(logOutButton);
         return new LoginPage1(driver);
     }
+
 }
