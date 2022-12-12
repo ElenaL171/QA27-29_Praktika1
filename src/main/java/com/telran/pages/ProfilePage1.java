@@ -10,7 +10,7 @@ public class ProfilePage1 extends BasePage {
         super(driver);
     }
 
-    @FindBy (xpath = "//*[contains(text(),'Logout')]")
+    @FindBy (id = "default")
     WebElement logOutButton;
 
     public LoginPage1 logOut() {

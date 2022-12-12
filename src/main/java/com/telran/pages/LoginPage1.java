@@ -15,7 +15,7 @@ public class LoginPage1 extends BasePage {
     @FindBy(id = "id_login-password")
     WebElement password;
 
-    @FindBy (xpath = "//*[contains(text(),'Login')]")
+    @FindBy (name = "login_submit")
     WebElement loginBtn;
 
     public ProfilePage1 login(String name, String pass) {
