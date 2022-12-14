@@ -15,12 +15,12 @@ public class Login_RegTests1 extends TestBase1{
         new HomePage(driver).click();
     }
 
-    @Test
+    @Test(priority = 1)
     public void RegistrationPositiveTest(){
         new LoginPage1(driver).registration(UserData.USER_EMAIL, UserData.USER_PASSWORD);
     }
 
-    @Test
+    @Test(priority = 2)
     public void LoginPositiveTest(){
         new LoginPage1(driver).login(UserData.USER_EMAIL, UserData.USER_PASSWORD);
     }

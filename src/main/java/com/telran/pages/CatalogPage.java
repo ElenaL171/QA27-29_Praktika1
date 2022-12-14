@@ -9,7 +9,7 @@ public class CatalogPage extends BasePage {
         super(driver);
     }
 
-    @FindBy (xpath = "//*[contains(text(),'In Warenkorb legen')]")
+    @FindBy (xpath = "//*[contains(text(),'Add to basket')]")
     WebElement addBtn;
 
     public CatalogPage click(){
@@ -23,6 +23,13 @@ public class CatalogPage extends BasePage {
     public BasketPage click1(){
         click(viewBtn);
         return new BasketPage(driver);
+    }
+    @FindBy(xpath = "//*[contains(text(),'Proceed to checkout')]")
+    WebElement checkout;
+
+    public FormPage click2(){
+        click(checkout);
+        return new FormPage(driver);
     }
 
 

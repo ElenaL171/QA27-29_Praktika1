@@ -9,7 +9,7 @@ public class PayPage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//button[contains(text(),'Continue')]")
+    @FindBy(xpath = "//*[contains(text(),'Continue')]")
     WebElement contBtn;
 
     public OrderPage click() {

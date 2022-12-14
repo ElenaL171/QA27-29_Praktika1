@@ -28,18 +28,22 @@ public class FormPage extends BasePage {
     @FindBy(id = "id_country")
     WebElement userCountry;
 
+    @FindBy(xpath = "//*[contains(text(),'Algeria')]")
+    WebElement country;
+
     @FindBy(xpath = "//button[contains(text(),'Continue')]")
     WebElement contBtn;
 
 
     public PayPage fillForm(String name, String lastname, String firstlineofaddress, String city,
-                             String postcode, String country) {
+                             String postcode) {
             type(userName, name);
             type(userLastName, lastname);
             type(id_line1, firstlineofaddress);
             type(userCity, city);
             type(userPostcode, postcode);
-            type(userCountry, country);
+            click(userCountry);
+            click(country);
             click(contBtn);
             return new PayPage(driver);
         }
