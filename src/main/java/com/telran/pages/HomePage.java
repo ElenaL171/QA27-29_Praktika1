@@ -19,7 +19,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath ="//*[contains(text(),'Go')]")
     WebElement go;
 
-    public HomePage click2(){
+    public HomePage selectLang(){
         click(langBtn);
         click(engBtn);
         click(go);
@@ -29,7 +29,7 @@ public class HomePage extends BasePage{
     @FindBy (xpath = "//*[contains(text(),'Login')]")
     WebElement logInButton;
 
-    public LoginPage1 click(){
+    public LoginPage1 clickLoginBtn(){
         click(logInButton);
         return new LoginPage1(driver);
     }

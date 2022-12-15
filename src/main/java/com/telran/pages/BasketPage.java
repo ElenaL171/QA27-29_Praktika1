@@ -11,7 +11,7 @@ public class BasketPage extends BasePage{
     @FindBy (xpath = "//*[contains(text(),'Proceed to checkout')]")
     WebElement checkout;
 
-    public FormPage click(){
+    public FormPage clickProceedToCheckout(){
         click(checkout);
         return new FormPage(driver);
     }

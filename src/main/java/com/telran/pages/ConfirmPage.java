@@ -16,4 +16,11 @@ public class ConfirmPage extends BasePage{
         click(logo);
         return new WelcomePage(driver);
     }
+
+    @FindBy(xpath = "//body/div[1]/div[1]/p[1]")
+    WebElement messageC;
+    public ConfirmPage verifyOrder(String s) {
+        messageC.getText().equalsIgnoreCase(s);
+            return this;
+    }
 }
